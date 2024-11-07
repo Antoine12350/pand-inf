@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandemic Diseases - Home</title>
+    <link rel="stylesheet" href="ccc.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- Logo -->
+            <img src="images/logo.png" alt="Logo" class="logo"> <!-- Add your logo here -->
+            <span class="header-title">Masha Pandemic Info</span>
+            <!-- Navigation Menu -->
+            <nav class="navbar">
+                <div class="navbar-brand">Pandemic Diseases</div>
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aids.html">HIV/AIDS</a></li>
+                    <li><a href="marbu.html">Marburg</a></li>
+                    <li><a href="covid.html">COVID-19</a></li>
+                    <li><a href="others.html">Others</a></li> <!-- Link to the new page -->
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+                <!-- Login Icon -->
+                <div class="login-icon" onclick="toggleLoginForm()">
+                    <i class="fas fa-user"></i> <!-- User icon -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login/Sign Up Form Modal -->
+    <div id="loginForm" class="login-form-modal">
+        <div class="login-form-content">
+            <span class="close" onclick="toggleLoginForm()">&times;</span>
+            <h2 id="formTitle">Login</h2>
+            <form id="loginFormSection" onsubmit="return loginUser(event);">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+                <p id="loginMessage" style="color: red;"></p> <!-- Message for login feedback -->
+            </form>
+            <div id="switchToSignUp">
+                <p>Don't have an account? <a href="#" onclick="switchToSignUp()">Sign Up</a></p>
+            </div>
+
+            <form id="signUpFormSection" action="signup.php" method="POST" style="display:none;">
+                <h2 id="formTitle">Sign Up</h2>
+                <label for="newUsername">Username</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+
+                <label for="newEmail">Email</label>
+                <input type="email" id="newEmail" name="newEmail" required>
+
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <div id="switchToLogin" style="display:none;">
+                <p>Already have an account? <a href="#" onclick="switchToLogin()">Log In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to the Pandemic Diseases Information Hub</h2>
+            <p>
+                This website is dedicated to providing comprehensive information on major pandemic diseases that have affected humanity throughout history. 
+                Here, you can learn about the causes, effects, and preventative measures for various pandemics, including COVID-19, Marburg, HIV/AIDS, and others.
+            </p>
+            <p>
+                Use the navigation menu to explore each section and find detailed information, including the latest research, historical context, and preventative tips.
+            </p>
+        </section>
+
+        <section class="disease-links">
+            <h2>Explore Diseases</h2>
+            <ul>
+                <li><a href="covid.html">COVID-19</a> - Learn about the global pandemic that started in 2019.</li>
+                <li><a href="aids.html">HIV/AIDS</a> - Learn about the ongoing battle against HIV and its effects.</li>
+                <li><a href="marbu.html">Marburg</a> - Discover information about the Marburg virus.</li>
+                <li><a href="others.html">Other Diseases</a> - Explore other notable pandemic diseases.</li> <!-- New item -->
+            </ul>
+        </section>
+    </main>
+    <marquee>
+        <h3 id="h3">Ms pand info</h3>
+        <h3 id="h3">STAY HOME</h3>
+        <h3 id="h3">STAY SAFE</h3>
+    </marquee>
+
+    <footer>
+        <p>&copy; 2024 Masha Pandemic Info</p>
+        <details>
+            <summary>Contact Us</summary>
+            <p>Email: info@mashapandemicinfo.com</p>
+            <p>Phone: +0798051645</p>
+        </details>
+        
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="back-to-top">
+        ↑ Back to Top
+    </button>
+
+    <script>
+        // Existing script content for login/signup
+        // (No change needed for functionality)
+    </script>
+</body>
+</html>
